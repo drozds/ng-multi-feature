@@ -1,0 +1,10 @@
+<ul class="list-group forecast">
+    <li class="list-group-item forecast__item" *ngFor="let forecast of forecasts$ | async">
+        <p class="forecast__temp">
+            {{ forecast.temp | number: '1.0-0'}}&#8451;
+        </p>
+        <p class="forecast__day">
+            {{ forecast.dateStr | date: 'E'}}
+        </p>
+    </li>
+</ul>
