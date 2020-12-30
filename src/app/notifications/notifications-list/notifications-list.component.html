@@ -1,0 +1,10 @@
+<div 
+    class="alert notification"
+    [ngClass]=" message.type === 'success' ? 'alert-success' : 'alert-danger'" 
+    *ngFor="let message of messages$ | async"
+>
+    
+    {{message.text}}
+    <button class="close" (click)="clearMessage(message.id)">x</button>
+
+</div>
